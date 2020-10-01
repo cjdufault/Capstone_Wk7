@@ -67,7 +67,7 @@ def show_forecast(forecast_list, units):
         desc = forecast['weather'][0]['main']
         windspeed = forecast['wind']['speed']
         
-        print(f'At {date}, {desc} and {temp}{temp_unit} with {windspeed} {speed_unit} winds')
+        print(f'At {date}, {desc:6} and {temp:6.2f}{temp_unit} with {windspeed:6.2f} {speed_unit} winds')
         
 
 # returns a list with a length equal to the number of expected arguments, with
