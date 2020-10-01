@@ -6,6 +6,7 @@ Usage: python [path]/weather.py [location] [unit system]
 import requests
 import os
 import sys
+import logging
 from datetime import datetime
 
 
@@ -49,7 +50,8 @@ def main():
             print(data['message'])  # show message from api if code not 200
                 
     else:
-        print('No API key found. Set environment variable "WEATHER_KEY".')
+        logging.debug('WEATHER_KEY not found. Set env variable WEATHER_KEY.')
+        print('Not authorized. Please contact an administrator.')
         
 
 def show_forecast(forecast_list, location, units):
