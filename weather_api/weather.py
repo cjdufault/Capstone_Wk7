@@ -42,7 +42,7 @@ def main():
         
         if data['cod'] == '200':
             show_forecast(data['list'], 
-                          data['city']['name'] + data['city']['country'],
+                          data['city']['name'] + ", " + data['city']['country'],
                           units)
             
         else:
